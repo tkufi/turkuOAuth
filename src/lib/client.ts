@@ -10,7 +10,8 @@ const authClient = createAuthClient({
 
 export const signIn = async () => {
     const data = await authClient.signIn.social({
-        provider: "roblox"
+        provider: "roblox",
+        callbackURL: "/auth",
     })
 }
 
@@ -23,6 +24,7 @@ export function User() {
 export function linkSocial(provider: string) {
     return authClient.linkSocial({
         provider,
+        callbackURL: "/auth",
     });
 }
 

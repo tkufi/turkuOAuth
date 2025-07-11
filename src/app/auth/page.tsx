@@ -1,92 +1,74 @@
 "use client";
-import { signIn, User, linkSocial, authClient } from "@/lib/client";
-import { Box, Button } from "@mui/material";
-import { Avatar } from "@mui/material"
-import { useEffect, useState } from 'react';
 
-import { useCallback } from 'react';
+import AuthButtons from "@/components/authButtons";
+import { User } from "@/lib/client";
+import { Avatar, Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
-export default function Home() {
-  const [account, setAccount] = useState({
-    robloxId: "",
-    discordId: "",
-    username: "",
-    imageUrl: "",
-  });
-
+export default function authPage() {
   const { sessionData } = User();
-  const { data: session, isPending, error } = sessionData;
+  const [userSession, setUserSession] = useState({});
 
   useEffect(() => {
-    const fetchAccountDetails = async () => {
-      try {
-        const accountData = await authClient.listAccounts();
-        const robloxInfo = accountData.data?.find(usrAccount => usrAccount.provider === "roblox");
-        const discordInfo = accountData.data?.find(usrAccount => usrAccount.provider === "discord");
-
-        setAccount({
-          robloxId: robloxInfo?.accountId || "",
-          discordId: discordInfo?.accountId || "",
-          username: session?.user.name || "",
-          imageUrl: session?.user.image?.toString() || "",
-        });
-      }
-      catch (err) {
-        console.error("Error fetching account details:", err);
-      }
+    if (sessionData) {
+      setUserSession(sessionData);
     }
-
-    if (session) {
-      fetchAccountDetails();
-    }
-
-  }, [session]);
-  // Align all items to the vertical and horizontal center of the screen
-  const handleLinkDiscord = useCallback(() => {
-    linkSocial("discord");
-  }, []);
+  }, [sessionData]);
 
   return (
-    // align all items to the true center of the screen
-    <Box alignItems={"center"} justifyContent="center" display="flex" flexDirection="column" sx={{ height: "100vh" }}>
-      {!session && (
-        <Button onClick={signIn} >
-          Sign In with Roblox
-        </Button>
-      )
-      }
+    <div>
+      <CardContent>
 
-      {isPending && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
+        {/* Display user information or prompt to link accounts */}
+        {
+          (!sessionData.data?.user.robloxId) && (
+            <>
+              <Box
+                component={"img"}
+                src="/ico.png"
+                height={64}
+                display={"inline"}
+              >
+              </Box>
 
-      {session && (
-        <Box>
-          <h1>Welcome, {session.user.name}!</h1>
-          <Avatar
-            src={account.imageUrl}
-            alt="User Avatar"
-          // width={100}
-          // height={100}
-          />
-          <p>Username: {account.username}</p>
-          <p>Roblox ID: {account.robloxId}</p>
+              <Stack spacing={1} sx={{ my: 5 }}>
+                <Typography variant="h5" component="div" align="center">
+                  Welcome to Tkurbx Auth
+                </Typography>
 
-          <p>Discord ID: {account.discordId}</p>
-
-        </Box>
-      )}
-
-      {session && !account.discordId && (
-
-        <Button onClick={handleLinkDiscord} >
-          Link Discord
-        </Button>
-
-      )}
-
-    </Box>
-
+                <Typography variant="body2" color="text.secondary" align="center">
+                  Please link your social accounts to continue.
+                </Typography>
+              </Stack>
+            </>
+          ) || (
+            <>
+              <CardHeader
+                sx={{ textAlign: "left" }}
+                avatar={
+                  <Avatar
+                    src={sessionData.data?.user.image?.toString() || ""}
+                    alt="User Avatar"
+                  />
+                }
+                title={sessionData.data?.user.name}
+                subheader={`Roblox ID: ${sessionData.data?.user.robloxId || "Not linked"}`} />
+            </>
+          )
+        }
 
 
+
+        <AuthButtons
+          gap={2}
+          alignItems="center"
+          justifyContent="center"
+          display="flex"
+          flexDirection="column"
+          sx={{ height: "100%" }}
+          sessionData={userSession}
+        />
+      </CardContent>
+    </div>
   );
 }
