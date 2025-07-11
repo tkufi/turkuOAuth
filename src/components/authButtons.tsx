@@ -3,6 +3,7 @@ import { Box, Button, Divider } from "@mui/material";
 import { Avatar } from "@mui/material"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from 'react';
+import { Icon } from '@iconify/react';
 
 import { useCallback } from 'react';
 
@@ -51,7 +52,7 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
 
                 if (robloxInfo && discordInfo) {
                     setTimeout(() => {
-                        router.push("/"); // Redirect to home page after 5 seconds
+                        router.push("https://tkurbx.com"); // Redirect to home page after 5 seconds
                     }, 5_000);
                 }
             }
@@ -76,7 +77,12 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
             {...props}
         >
             {((!session) && (!account.discordId)) && (
-                <Button variant="outlined" onClick={signIn} size="medium">
+                <Button
+                    variant="outlined"
+                    onClick={signIn}
+                    size="large"
+                    startIcon={<Icon icon="simple-icons:robloxstudio" width="24" height="24"></Icon>}
+                >
                     Sign In with Roblox
                 </Button>
             )
@@ -86,7 +92,12 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
             {error && <p>Error: {error.message}</p>}
 
             {session && !account.discordId && (
-                <Button variant="outlined" onClick={handleLinkDiscord} size="medium">
+                <Button
+                    variant="outlined"
+                    onClick={handleLinkDiscord}
+                    size="large"
+                    startIcon={<Icon icon="simple-icons:discord" width="24" height="24"></Icon>}
+                >
                     Link Discord
                 </Button>
 
