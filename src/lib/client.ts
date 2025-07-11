@@ -15,19 +15,8 @@ export const signIn = async () => {
 }
 
 export function User() {
-
-    // const {data: session} = await authClient.useSession();
-    // const account = await authClient.accountInfo({
-    //     id: session?.user.id
-    // });
-
-    // return authClient.useSession();
     return {
-        // account: await authClient.accountInfo({
-        //     accountId: "accountId"
-        // }),
         sessionData: authClient.useSession(),
-        accounts: authClient.listAccounts(),
     }
 }
 
@@ -36,3 +25,5 @@ export function linkSocial(provider: string) {
         provider,
     });
 }
+
+export { authClient }
