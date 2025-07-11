@@ -1,6 +1,5 @@
 import { signIn, User, linkSocial, authClient } from "@/lib/client";
-import { Box, Button, Divider } from "@mui/material";
-import { Avatar } from "@mui/material"
+import { Box, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
