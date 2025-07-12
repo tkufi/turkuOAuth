@@ -1,0 +1,177 @@
+import { Box, Divider, Fab, Stack } from "@mui/material";
+import { Icon } from "@iconify/react"
+import FloatingActionBox from "@/components/FloatingActionBox";
+
+export default function privacyPage() {
+    return (
+        <>
+            <Box
+                minHeight={"100vh"}
+                width={{ xs: "100%", sm: "60%" }}
+                sx={{
+                    p: 3,
+                    backgroundColor: "#161c24",
+                    color: "#ffffff",
+                    mx: "auto"
+                }}
+            >
+                <h1>Privacy Policy for TurkuNode Discord Bot and tkurbx.com</h1>
+
+                <Stack spacing={3} sx={{ my: 3 }} textAlign="left">
+                    <Box component="p" sx={{ fontWeight: 500, color: "text.secondary" }}>
+                        Effective Date: <b>June 12, 2025</b>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Introduction</h2>
+                        <p>
+                            This Privacy Policy explains how the TurkuNode Discord bot ("Bot") and the tkurbx.com website ("Website") handle your information. This policy covers data processed by the Bot, the Website's user management (including auth.tkurbx.com for linking), and the Better-Auth system integrated across our services. By using the Bot or the Website, you agree to the practices described in this policy.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Information Collection</h2>
+                        <p>
+                            We collect different types of information to provide and improve our services. Personally identifiable information (PII) collected includes data that can be used to identify you directly or indirectly, such as your User ID, Name, Profile Image, Roblox ID, Discord ID, Provider ID, Account ID, and associated authentication tokens.
+                        </p>
+                        <Stack component="ul" spacing={2} sx={{ pl: 3 }}>
+                            <li>
+                                <b>Information from tkurbx.com User Accounts:</b>
+                                <ul style={{ marginTop: 4 }}>
+                                    <li>User ID: A unique identifier for your account.</li>
+                                    <li>Name: Your username and display names.</li>
+                                    <li>Profile Image: Your Roblox profile image.</li>
+                                    <li>Account Creation and Update Data: Information about when your account was created and last modified.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Linking Information (via auth.tkurbx.com):</b>
+                                <ul style={{ marginTop: 4 }}>
+                                    <li>Roblox ID: Your Roblox User ID to connect your tkurbx.com account with your Roblox identity.</li>
+                                    <li>Discord ID: Your Discord User ID to connect your tkurbx.com account with your Discord identity.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Authentication Information (via Better-Auth and Account Management):</b>
+                                <ul style={{ marginTop: 4 }}>
+                                    <li>User ID: To link authentication details to your tkurbx.com account.</li>
+                                    <li>Provider ID &amp; Account ID: Information from third-party login providers (like Discord or Google) if you use them to sign in.</li>
+                                    <li>Access Tokens, Refresh Tokens, ID Tokens, and Expiry Dates: Credentials from third-party services (like Discord or Roblox) that let us access certain information or perform actions on your behalf (with your permission). They are stored with their expiry times.</li>
+                                    <li>User Agent: Information about your browser and operating system, used for security and to prevent fraud.</li>
+                                    <li>Authentication Record Data: Information about when authentication records were created and last updated.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Verification Information:</b> For certain processes, we may store data necessary for verification.
+                            </li>
+                            <li>
+                                <b>Discord Bot Specific Information:</b>
+                                <ul style={{ marginTop: 4 }}>
+                                    <li>
+                                        The Bot uses your Discord ID and Roblox ID (linked via auth.tkurbx.com) to provide personalized services and manage your interactions within Discord.
+                                    </li>
+                                </ul>
+                            </li>
+                        </Stack>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Use of Information</h2>
+                        <p>The information we collect is used to:</p>
+                        <Stack component="ul" spacing={1.5} sx={{ pl: 3 }}>
+                            <li>
+                                <b>Provide and Improve Services:</b> To run, maintain, and enhance the TurkuNode Discord bot and the services on tkurbx.com. This includes processing commands, managing linked accounts, delivering personalized experiences, and providing account-specific features.
+                            </li>
+                            <li>
+                                <b>Authentication and Security:</b> Information from Better-Auth and our account management is vital for securely authenticating users, preventing unauthorized access, detecting and preventing fraud, and maintaining system integrity.
+                            </li>
+                            <li>
+                                <b>Account Management:</b> To manage user accounts, including creation, login, updates, and linking external accounts (Roblox, Discord).
+                            </li>
+                            <li>
+                                <b>Communication:</b> To send you important notices and updates about the Bot or tkurbx.com, and to respond to your inquiries or support requests.
+                            </li>
+                            <li>
+                                <b>Understand and Analyze Usage:</b> To understand how our services are used, which helps us develop new features and improve existing ones.
+                            </li>
+                            <li>
+                                <b>Comply with Laws:</b> To meet applicable laws, regulations, and legal processes.
+                            </li>
+                        </Stack>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Sharing of Information</h2>
+                        <p>
+                            Your personal information will never be transferred, sold, or shared with any third parties under any circumstances. We are committed to maintaining the utmost privacy and confidentiality of your data.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Data Security</h2>
+                        <p>
+                            We use appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, including your name, linked IDs, authentication tokens, and any associated data stored on our servers. This includes, but isn't limited to, firewalls and secure access protocols. While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Cookies</h2>
+                        <p>
+                            Our Bot doesn't directly use cookies for its main functions. On the tkurbx.com website, cookies are used solely for authentication purposes, allowing you to log in and stay logged in securely.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Children's Privacy</h2>
+                        <p>
+                            Our services are not intended for anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you're a parent or guardian and know that your child has provided us with personal information, please contact us. If we find out that we have collected personal information from a child under 13 without verified parental consent, we will take steps to remove that information from our servers.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Changes to This Privacy Policy</h2>
+                        <p>
+                            We may update our Privacy Policy from time to time. We'll let you know about any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. For significant changes, we might also notify you through the Bot or on the tkurbx.com website. We advise you to review this Privacy Policy periodically for any changes. Your continued use of the Bot and our services after any modifications will mean you acknowledge and agree to the updated policy.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Contact Us</h2>
+                        <p>
+                            If you have any questions about this Privacy Policy, the TurkuNode Discord Bot's practices, or your dealings with tkurbx.com, please contact us at{" "}
+                            <a href="mailto:privacy@tkurbx.com" style={{ color: "#64B5F6", textDecoration: "underline" }}>
+                                privacy@tkurbx.com
+                            </a>.
+                        </p>
+                    </Box>
+                </Stack>
+
+            </Box>
+
+            <FloatingActionBox>
+                <Fab size="medium" variant="extended" color="primary" aria-label="contact" href="mailto:privacy@tkurbx.com">
+                    <Icon icon="simple-icons:maildotru" style={{ marginRight: 8 }} />
+                    <b>Contact us</b>
+                </Fab>
+            </FloatingActionBox>
+        </>
+    );
+}

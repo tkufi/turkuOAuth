@@ -41,9 +41,7 @@ export default function RootLayout({
                 }}
             >
                 <MuiThemeProvider>
-                    <Card sx={{ py: 5, px: 3 }}>
                         {children}
-                    </Card>
                 </MuiThemeProvider>
             </body>
         </html >
