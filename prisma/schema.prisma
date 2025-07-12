@@ -17,6 +17,8 @@ model WarningTable {
   ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
+
+  @@map("warnings")
 }
 
 model BanTable {
@@ -26,6 +28,8 @@ model BanTable {
   ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
+
+  @@map("bans")
 }
 
 model KickTable {
@@ -35,6 +39,8 @@ model KickTable {
   ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
+
+  @@map("kicks")
 }
 
 model TimeoutTable {
@@ -45,6 +51,8 @@ model TimeoutTable {
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
   Duration      Int
+
+  @@map("timeouts")
 }
 
 model CommunityBanTable {
@@ -53,13 +61,11 @@ model CommunityBanTable {
   OversightId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
+
+  @@map("communityBans")
 }
 
-model VerifyingTable {
-  DiscordId BigInt  @id
-  RobloxId  BigInt?
-  Code      String  @db.VarChar(255)
-}
+//////////////////////////////////////////////////////////////
 
 model User {
   id            String    @id
