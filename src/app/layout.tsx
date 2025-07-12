@@ -16,7 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Tkurbx Auth",
     description: "Tkurbx Auth is a simple authentication system for Tkurbx.",
-
 };
 
 

@@ -28,7 +28,7 @@ export default function authPage() {
               <>
                 <Box
                   component={"img"}
-                  src="/ico.png"
+                  src="/tkurbx.jpg"
                   alt="logo"
                   height={64}
                   display={"inline"}
