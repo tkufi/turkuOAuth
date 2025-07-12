@@ -1,6 +1,7 @@
 "use client";
 
 import AuthButtons from "@/components/authButtons";
+import FloatingActionBox from "@/components/FloatingActionBox";
 import { User } from "@/lib/client";
 import { Avatar, Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -16,6 +17,7 @@ export default function authPage() {
   }, [sessionData]);
 
   return (
+    <>
     <Card sx={{ py: 5, px: 3 }}>
       <div>
         <CardContent>
@@ -73,5 +75,16 @@ export default function authPage() {
         </CardContent>
       </div>
     </Card>
+    <FloatingActionBox>
+      <Box sx={{ textAlign: "right", color: "#E0E0E0" }}>
+        <Typography variant="body2">
+          By using Tkurbx Auth, you agree to our <a href="/legal/privacy" style={{ color: "#81D4FA" }}>Privacy Policy</a> and <a href="/legal/terms" style={{ color: "#81D4FA" }}>Terms of Service</a>.
+        </Typography>
+        <Typography variant="body2">
+          © {new Date().getFullYear()} Tkurbx. All rights reserved.
+        </Typography>
+      </Box>
+    </FloatingActionBox>
+    </>
   );
 }
