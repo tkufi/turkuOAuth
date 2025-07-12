@@ -1,8 +1,6 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { PrismaClient } from '../../generated/prisma';
-import { roblox } from "better-auth/social-providers";
-import { createAuthMiddleware } from "better-auth/api";
 
 const prisma = new PrismaClient();
 
