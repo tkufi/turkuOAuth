@@ -7,7 +7,7 @@ export default function TermsPage() {
         <>
             <Box
                 minHeight={"100vh"}
-                width={{ xs: "100%", sm: "60%" }}
+                width={{ xs: "100%", sm: "50%" }}
                 sx={{
                     p: 3,
                     backgroundColor: "#161c24",
