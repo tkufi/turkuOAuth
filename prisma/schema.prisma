@@ -1,86 +1,64 @@
-
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma"
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
-model UserTable {
-  RobloxId                                         BigInt         @id
-  Username                                         String         @db.VarChar(25)
-  DiscordId                                        BigInt         @unique(map: "DiscordId")
-  CreatedAt                                        DateTime?      @db.DateTime(0)
-  LastOnline                                       DateTime?      @db.DateTime(0)
-  IsOversight                                      Boolean?
-  BanTable_BanTable_DiscordIdToUserTable           BanTable[]     @relation("BanTable_DiscordIdToUserTable")
-  BanTable_BanTable_ModeratorIdToUserTable         BanTable[]     @relation("BanTable_ModeratorIdToUserTable")
-  KickTable_KickTable_DiscordIdToUserTable         KickTable[]    @relation("KickTable_DiscordIdToUserTable")
-  KickTable_KickTable_ModeratorIdToUserTable       KickTable[]    @relation("KickTable_ModeratorIdToUserTable")
-  TimeoutTable_TimeoutTable_DiscordIdToUserTable   TimeoutTable[] @relation("TimeoutTable_DiscordIdToUserTable")
-  TimeoutTable_TimeoutTable_ModeratorIdToUserTable TimeoutTable[] @relation("TimeoutTable_ModeratorIdToUserTable")
-  WarningTable                                     WarningTable[]
-  WarningTable_WarningTable_ModeratorIdToUserTable WarningTable[] @relation("WarningTable_ModeratorIdToUserTable")
-}
+// UserTable has been removed as requested.
+// All dependencies on UserTable in other models have also been removed.
 
 model WarningTable {
-  Id                                            Int       @id @default(autoincrement())
-  GuildId                                       BigInt
-  DiscordId                                     BigInt
-  ModeratorId                                   BigInt
-  Reason                                        String    @db.VarChar(255)
-  WarnTime                                      DateTime  @default(now()) @db.DateTime(0)
-  UserTable                                     UserTable @relation(fields: [DiscordId], references: [DiscordId], onDelete: Cascade, map: "fk_warning_discord_id")
-  UserTable_WarningTable_ModeratorIdToUserTable UserTable @relation("WarningTable_ModeratorIdToUserTable", fields: [ModeratorId], references: [DiscordId], onDelete: Cascade, map: "fk_warning_moderator_id")
+  id           Int      @id @default(autoincrement())
+  GuildId      BigInt
+  DiscordId    BigInt   // No longer a foreign key to UserTable
+  ModeratorId  BigInt   // No longer a foreign key to UserTable
+  Reason       String   @db.VarChar(255)
+  EffectiveTime     DateTime @default(now()) @db.Timestamp
 
-  @@index([DiscordId], map: "fk_warning_discord_id")
-  @@index([ModeratorId], map: "fk_warning_moderator_id")
+  // Removed relations to UserTable
+  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model BanTable {
-  Id                                        Int       @id @default(autoincrement())
-  GuildId                                   BigInt
-  DiscordId                                 BigInt
-  ModeratorId                               BigInt
-  Reason                                    String    @db.VarChar(255)
-  BanTime                                   DateTime  @default(now()) @db.DateTime(0)
-  UserTable_BanTable_DiscordIdToUserTable   UserTable @relation("BanTable_DiscordIdToUserTable", fields: [DiscordId], references: [DiscordId], onDelete: Cascade, map: "fk_ban_discord_id")
-  UserTable_BanTable_ModeratorIdToUserTable UserTable @relation("BanTable_ModeratorIdToUserTable", fields: [ModeratorId], references: [DiscordId], onDelete: Cascade, map: "fk_ban_moderator_id")
+  id          Int      @id @default(autoincrement())
+  GuildId     BigInt
+  DiscordId   BigInt   // No longer a foreign key to UserTable
+  ModeratorId BigInt   // No longer a foreign key to UserTable
+  Reason      String   @db.VarChar(255)
+  EffectiveTime     DateTime @default(now()) @db.Timestamp
 
-  @@index([DiscordId], map: "fk_ban_discord_id")
-  @@index([ModeratorId], map: "fk_ban_moderator_id")
+  // Removed relations to UserTable
+  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model KickTable {
-  Id                                         Int       @id @default(autoincrement())
-  GuildId                                    BigInt
-  DiscordId                                  BigInt
-  ModeratorId                                BigInt
-  Reason                                     String    @db.VarChar(255)
-  KickTime                                   DateTime  @default(now()) @db.DateTime(0)
-  UserTable_KickTable_DiscordIdToUserTable   UserTable @relation("KickTable_DiscordIdToUserTable", fields: [DiscordId], references: [DiscordId], onDelete: Cascade, map: "fk_kick_discord_id")
-  UserTable_KickTable_ModeratorIdToUserTable UserTable @relation("KickTable_ModeratorIdToUserTable", fields: [ModeratorId], references: [DiscordId], onDelete: Cascade, map: "fk_kick_moderator_id")
+  id          Int      @id @default(autoincrement())
+  GuildId     BigInt
+  DiscordId   BigInt   // No longer a foreign key to UserTable
+  ModeratorId BigInt   // No longer a foreign key to UserTable
+  Reason      String   @db.VarChar(255)
+  EffectiveTime    DateTime @default(now()) @db.Timestamp
 
-  @@index([DiscordId], map: "fk_kick_discord_id")
-  @@index([ModeratorId], map: "fk_kick_moderator_id")
+  // Removed relations to UserTable
+  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model TimeoutTable {
-  Id                                            Int       @id @default(autoincrement())
-  GuildId                                       BigInt
-  DiscordId                                     BigInt
-  ModeratorId                                   BigInt
-  Reason                                        String    @db.VarChar(255)
-  TimeoutTime                                   DateTime  @default(now()) @db.DateTime(0)
-  Duration                                      Int
-  UserTable_TimeoutTable_DiscordIdToUserTable   UserTable @relation("TimeoutTable_DiscordIdToUserTable", fields: [DiscordId], references: [DiscordId], onDelete: Cascade, map: "fk_timeout_discord_id")
-  UserTable_TimeoutTable_ModeratorIdToUserTable UserTable @relation("TimeoutTable_ModeratorIdToUserTable", fields: [ModeratorId], references: [DiscordId], onDelete: Cascade, map: "fk_timeout_moderator_id")
+  id          Int      @id @default(autoincrement())
+  GuildId     BigInt
+  DiscordId   BigInt   // No longer a foreign key to UserTable
+  ModeratorId BigInt   // No longer a foreign key to UserTable
+  Reason      String   @db.VarChar(255)
+  EffectiveTime DateTime @default(now()) @db.Timestamp
+  Duration    Int
 
-  @@index([DiscordId], map: "fk_timeout_discord_id")
-  @@index([ModeratorId], map: "fk_timeout_moderator_id")
+  // Removed relations to UserTable
+  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model CommunityBanTable {
@@ -88,7 +66,7 @@ model CommunityBanTable {
   DiscordId     BigInt
   OversightId   BigInt
   Reason        String   @db.VarChar(255)
-  EffectiveTime DateTime @default(now()) @db.DateTime(0)
+  EffectiveTime DateTime @default(now()) @db.Timestamp
 }
 
 model VerifyingTable {
@@ -97,6 +75,7 @@ model VerifyingTable {
   Code      String  @db.VarChar(255)
 }
 
+// Keep existing models as they seem to be for authentication/session management
 model User {
   id            String    @id
   name          String    @db.Text
@@ -109,24 +88,23 @@ model User {
   sessions      Session[]
 
   robloxId String? @db.Text
-
   discordId String? @db.Text
 
   @@map("user")
 }
 
 model Session {
-  id        String   @id
+  id        String    @id
   expiresAt DateTime
-  token     String   @unique
+  token     String    @unique
   createdAt DateTime
   updatedAt DateTime
-  ipAddress String?  @db.Text
-  userAgent String?  @db.Text
+  ipAddress String?   @db.Text
+  userAgent String?   @db.Text
   userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade, map: "session_user_fkey")
 
-  @@index([userId], map: "session_userId_fkey")
+  @@index([userId])
   @@map("session")
 }
 
@@ -144,9 +122,9 @@ model Account {
   password              String?   @db.Text
   createdAt             DateTime
   updatedAt             DateTime
-  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade, map: "account_user_fkey")
 
-  @@index([userId], map: "account_userId_fkey")
+  @@index([userId])
   @@map("account")
 }
 
