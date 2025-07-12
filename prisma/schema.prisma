@@ -10,56 +10,41 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-// UserTable has been removed as requested.
-// All dependencies on UserTable in other models have also been removed.
-
 model WarningTable {
   id            Int      @id @default(autoincrement())
   GuildId       BigInt
-  DiscordId     BigInt // No longer a foreign key to UserTable
-  ModeratorId   BigInt // No longer a foreign key to UserTable
+  DiscordId     BigInt
+  ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
-
-  // Removed relations to UserTable
-  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model BanTable {
   id            Int      @id @default(autoincrement())
   GuildId       BigInt
-  DiscordId     BigInt // No longer a foreign key to UserTable
-  ModeratorId   BigInt // No longer a foreign key to UserTable
+  DiscordId     BigInt
+  ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
-
-  // Removed relations to UserTable
-  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model KickTable {
   id            Int      @id @default(autoincrement())
   GuildId       BigInt
-  DiscordId     BigInt // No longer a foreign key to UserTable
-  ModeratorId   BigInt // No longer a foreign key to UserTable
+  DiscordId     BigInt
+  ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
-
-  // Removed relations to UserTable
-  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model TimeoutTable {
   id            Int      @id @default(autoincrement())
   GuildId       BigInt
-  DiscordId     BigInt // No longer a foreign key to UserTable
-  ModeratorId   BigInt // No longer a foreign key to UserTable
+  DiscordId     BigInt
+  ModeratorId   BigInt
   Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
   Duration      Int
-
-  // Removed relations to UserTable
-  // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model CommunityBanTable {
@@ -76,8 +61,6 @@ model VerifyingTable {
   Code      String  @db.VarChar(255)
 }
 
-// Keep existing models as they seem to be for authentication/session management
-
 model User {
   id            String    @id
   name          String    @db.Text
@@ -89,8 +72,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
 
-  robloxId  String? @db.Text
-  discordId String? @db.Text
+  robloxId String? @db.Text
 
   @@map("user")
 }

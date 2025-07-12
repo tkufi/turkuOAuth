@@ -28,11 +28,6 @@ export const auth = betterAuth({
         type: "string",
         required: false,
         description: "The Roblox user ID",
-      },
-      discordId: {
-        type: "string",
-        required: false,
-        description: "The Discord user ID",
       }
     }
   },
@@ -55,44 +50,8 @@ export const auth = betterAuth({
     discord: {
       clientId: process.env.DISCORD_CLIENT_ID as string,
       clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
-
-      mapProfileToUser: (profile) => {
-        return {
-          discordId: profile.id, // Discord user ID
-        };
-      }
     }
   },
-
-  // hooks: {
-  //   after: createAuthMiddleware(async (ctx) => {
-  //     const session = ctx.context.session;
-  //     console.log("Session in after hook:", session);
-  //     if (session) {
-  //       const user = await prisma.user.findUnique({
-  //         where: { id: session.user.id },
-  //       });
-
-  //       if (user) {
-  //         // Update the user's Roblox ID if it exists in the session
-  //         if (session.user.robloxId) {
-  //           await prisma.user.update({
-  //             where: { id: user.id },
-  //             data: { robloxId: session.user.robloxId },
-  //           });
-  //         }
-
-  //         // Update the user's Discord ID if it exists in the session
-  //         if (session.user.discordId) {
-  //           await prisma.user.update({
-  //             where: { id: user.id },
-  //             data: { discordId: session.user.discordId },
-  //           });
-  //         }
-  //       }
-  //     }
-  //   }),
-  // },
 });
 
 type Session = typeof auth.$Infer.Session;
