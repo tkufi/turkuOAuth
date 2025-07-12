@@ -11,6 +11,12 @@ export const auth = betterAuth({
     provider: "mysql",
   }),
 
+  advanced: {
+    ipAddress: {
+      disableIpTracking: true
+    }
+  },
+
   account: {
     accountLinking: {
       enabled: true,

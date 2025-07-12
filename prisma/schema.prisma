@@ -1,3 +1,4 @@
+
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma"
@@ -13,49 +14,49 @@ datasource db {
 // All dependencies on UserTable in other models have also been removed.
 
 model WarningTable {
-  id           Int      @id @default(autoincrement())
-  GuildId      BigInt
-  DiscordId    BigInt   // No longer a foreign key to UserTable
-  ModeratorId  BigInt   // No longer a foreign key to UserTable
-  Reason       String   @db.VarChar(255)
-  EffectiveTime     DateTime @default(now()) @db.Timestamp
+  id            Int      @id @default(autoincrement())
+  GuildId       BigInt
+  DiscordId     BigInt // No longer a foreign key to UserTable
+  ModeratorId   BigInt // No longer a foreign key to UserTable
+  Reason        String   @db.VarChar(255)
+  EffectiveTime DateTime @default(now()) @db.Timestamp
 
   // Removed relations to UserTable
   // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model BanTable {
-  id          Int      @id @default(autoincrement())
-  GuildId     BigInt
-  DiscordId   BigInt   // No longer a foreign key to UserTable
-  ModeratorId BigInt   // No longer a foreign key to UserTable
-  Reason      String   @db.VarChar(255)
-  EffectiveTime     DateTime @default(now()) @db.Timestamp
+  id            Int      @id @default(autoincrement())
+  GuildId       BigInt
+  DiscordId     BigInt // No longer a foreign key to UserTable
+  ModeratorId   BigInt // No longer a foreign key to UserTable
+  Reason        String   @db.VarChar(255)
+  EffectiveTime DateTime @default(now()) @db.Timestamp
 
   // Removed relations to UserTable
   // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model KickTable {
-  id          Int      @id @default(autoincrement())
-  GuildId     BigInt
-  DiscordId   BigInt   // No longer a foreign key to UserTable
-  ModeratorId BigInt   // No longer a foreign key to UserTable
-  Reason      String   @db.VarChar(255)
-  EffectiveTime    DateTime @default(now()) @db.Timestamp
+  id            Int      @id @default(autoincrement())
+  GuildId       BigInt
+  DiscordId     BigInt // No longer a foreign key to UserTable
+  ModeratorId   BigInt // No longer a foreign key to UserTable
+  Reason        String   @db.VarChar(255)
+  EffectiveTime DateTime @default(now()) @db.Timestamp
 
   // Removed relations to UserTable
   // No @@index blocks needed if these fields are not part of unique constraints or relations
 }
 
 model TimeoutTable {
-  id          Int      @id @default(autoincrement())
-  GuildId     BigInt
-  DiscordId   BigInt   // No longer a foreign key to UserTable
-  ModeratorId BigInt   // No longer a foreign key to UserTable
-  Reason      String   @db.VarChar(255)
+  id            Int      @id @default(autoincrement())
+  GuildId       BigInt
+  DiscordId     BigInt // No longer a foreign key to UserTable
+  ModeratorId   BigInt // No longer a foreign key to UserTable
+  Reason        String   @db.VarChar(255)
   EffectiveTime DateTime @default(now()) @db.Timestamp
-  Duration    Int
+  Duration      Int
 
   // Removed relations to UserTable
   // No @@index blocks needed if these fields are not part of unique constraints or relations
@@ -76,6 +77,7 @@ model VerifyingTable {
 }
 
 // Keep existing models as they seem to be for authentication/session management
+
 model User {
   id            String    @id
   name          String    @db.Text
@@ -87,22 +89,22 @@ model User {
   accounts      Account[]
   sessions      Session[]
 
-  robloxId String? @db.Text
+  robloxId  String? @db.Text
   discordId String? @db.Text
 
   @@map("user")
 }
 
 model Session {
-  id        String    @id
+  id        String   @id
   expiresAt DateTime
-  token     String    @unique
+  token     String   @unique
   createdAt DateTime
   updatedAt DateTime
-  ipAddress String?   @db.Text
-  userAgent String?   @db.Text
+  ipAddress String?  @db.Text
+  userAgent String?  @db.Text
   userId    String
-  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade, map: "session_user_fkey")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade, map: "session_user_fkey")
 
   @@index([userId])
   @@map("session")
