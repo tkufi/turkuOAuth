@@ -27,7 +27,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Introduction</h2>
                         <p>
-                            This Privacy Policy explains how the TurkuNode Discord bot ("Bot") and the tkurbx.com website ("Website") handle your information. This policy covers data processed by the Bot, the Website's user management (including auth.tkurbx.com for linking), and the Better-Auth system integrated across our services. By using the Bot or the Website, you agree to the practices described in this policy.
+                            This Privacy Policy explains how Tkurbx ("Tkurbx", "we", "our", or "us") handles your personal information across our services, including the TurkuNode Discord bot ("TurkuNode", or "Bot") and the tkurbx.com website ("Website"). It also applies to our authentication system (auth.tkurbx.com) and integration with Better-Auth. By using TurkuNode, the tkurbx.com website, or any services offered by Tkurbx, you agree to the practices described in this policy.
                         </p>
                     </Box>
 
@@ -72,7 +72,7 @@ export default function privacyPage() {
                                 <b>Discord Bot Specific Information:</b>
                                 <ul style={{ marginTop: 4 }}>
                                     <li>
-                                        The Bot uses your Discord ID and Roblox ID (linked via auth.tkurbx.com) to provide personalized services and manage your interactions within Discord.
+                                        TurkuNode uses your Discord ID and Roblox ID (linked via auth.tkurbx.com) to provide personalized services and manage your interactions within Discord.
                                     </li>
                                 </ul>
                             </li>
@@ -86,7 +86,7 @@ export default function privacyPage() {
                         <p>The information we collect is used to:</p>
                         <Stack component="ul" spacing={1.5} sx={{ pl: 3 }}>
                             <li>
-                                <b>Provide and Improve Services:</b> To run, maintain, and enhance the TurkuNode Discord bot and the services on tkurbx.com. This includes processing commands, managing linked accounts, delivering personalized experiences, and providing account-specific features.
+                                <b>Provide and Improve Services:</b> To run, maintain, and enhance Tkurbx’s services, including TurkuNode and the tkurbx.com website. This includes processing commands, managing linked accounts, delivering personalized experiences, and providing account-specific features.
                             </li>
                             <li>
                                 <b>Authentication and Security:</b> Information from Better-Auth and our account management is vital for securely authenticating users, preventing unauthorized access, detecting and preventing fraud, and maintaining system integrity.
@@ -95,7 +95,7 @@ export default function privacyPage() {
                                 <b>Account Management:</b> To manage user accounts, including creation, login, updates, and linking external accounts (Roblox, Discord).
                             </li>
                             <li>
-                                <b>Communication:</b> To send you important notices and updates about the Bot or tkurbx.com, and to respond to your inquiries or support requests.
+                                <b>Communication:</b> To send you important notices and updates about TurkuNode or the tkurbx.com website, and to respond to your inquiries or support requests.
                             </li>
                             <li>
                                 <b>Understand and Analyze Usage:</b> To understand how our services are used, which helps us develop new features and improve existing ones.
@@ -129,7 +129,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Cookies</h2>
                         <p>
-                            Our Bot doesn't directly use cookies for its main functions. On the tkurbx.com website, cookies are used solely for authentication purposes, allowing you to log in and stay logged in securely.
+                            TurkuNode doesn't directly use cookies for its main functions. On the tkurbx.com website, cookies are used solely for authentication purposes, allowing you to log in and stay logged in securely.
                         </p>
                     </Box>
 
@@ -147,7 +147,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Changes to This Privacy Policy</h2>
                         <p>
-                            We may update our Privacy Policy from time to time. We'll let you know about any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. For significant changes, we might also notify you through the Bot or on the tkurbx.com website. We advise you to review this Privacy Policy periodically for any changes. Your continued use of the Bot and our services after any modifications will mean you acknowledge and agree to the updated policy.
+                            We may update our Privacy Policy from time to time. We'll let you know about any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. For significant changes, we might also notify you through TurkuNode or the tkurbx.com website. We advise you to review this Privacy Policy periodically for any changes. Your continued use of TurkuNode and our services after any modifications will mean you acknowledge and agree to the updated policy.
                         </p>
                     </Box>
 
@@ -156,7 +156,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Contact Us</h2>
                         <p>
-                            If you have any questions about this Privacy Policy, the TurkuNode Discord Bot's practices, or your dealings with tkurbx.com, please contact us at{" "}
+                            If you have any questions about this Privacy Policy, TurkuNode's practices, or your dealings with tkurbx.com, please contact us at{" "}
                             <a href="mailto:privacy@tkurbx.com" style={{ color: "#64B5F6", textDecoration: "underline" }}>
                                 privacy@tkurbx.com
                             </a>.
