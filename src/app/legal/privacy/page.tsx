@@ -19,7 +19,7 @@ export default function privacyPage() {
 
                 <Stack spacing={3} sx={{ my: 3 }} textAlign="left">
                     <Box component="p" sx={{ fontWeight: 500, color: "text.secondary" }}>
-                        Effective Date: <b>June 12, 2025</b>
+                        Effective Date: <b>12 June 2025</b>
                     </Box>
 
                     <Divider variant="middle" color="#E0E0E0" />
@@ -72,7 +72,7 @@ export default function privacyPage() {
                                 <b>Discord Bot Specific Information:</b>
                                 <ul style={{ marginTop: 4 }}>
                                     <li>
-                                        TurkuNode uses your Discord ID and Roblox ID (linked via auth.tkurbx.com) to provide personalized services and manage your interactions within Discord.
+                                        TurkuNode uses your Discord ID and Roblox ID (linked via auth.tkurbx.com) to provide personalised services and manage your interactions within Discord.
                                     </li>
                                 </ul>
                             </li>
@@ -86,19 +86,19 @@ export default function privacyPage() {
                         <p>The information we collect is used to:</p>
                         <Stack component="ul" spacing={1.5} sx={{ pl: 3 }}>
                             <li>
-                                <b>Provide and Improve Services:</b> To run, maintain, and enhance Tkurbx’s services, including TurkuNode and the tkurbx.com website. This includes processing commands, managing linked accounts, delivering personalized experiences, and providing account-specific features.
+                                <b>Provide and Improve Services:</b> To run, maintain, and enhance Tkurbx’s services, including TurkuNode and the tkurbx.com website. This includes processing commands, managing linked accounts, delivering personalised experiences, and providing account-specific features.
                             </li>
                             <li>
-                                <b>Authentication and Security:</b> Information from Better-Auth and our account management is vital for securely authenticating users, preventing unauthorized access, detecting and preventing fraud, and maintaining system integrity.
+                                <b>Authentication and Security:</b> Information from Better-Auth and our account management is vital for securely authenticating users, preventing unauthorised access, detecting and preventing fraud, and maintaining system integrity.
                             </li>
                             <li>
                                 <b>Account Management:</b> To manage user accounts, including creation, login, updates, and linking external accounts (Roblox, Discord).
                             </li>
                             <li>
-                                <b>Communication:</b> To send you important notices and updates about TurkuNode or the tkurbx.com website, and to respond to your inquiries or support requests.
+                                <b>Communication:</b> To send you important notices and updates about TurkuNode or the tkurbx.com website, and to respond to your enquiries or support requests.
                             </li>
                             <li>
-                                <b>Understand and Analyze Usage:</b> To understand how our services are used, which helps us develop new features and improve existing ones.
+                                <b>Understand and Analyse Usage:</b> To understand how our services are used, which helps us develop new features and improve existing ones.
                             </li>
                             <li>
                                 <b>Comply with Laws:</b> To meet applicable laws, regulations, and legal processes.
@@ -144,7 +144,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Data Retention</h2>
                         <p>
-                            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law. Account-related data is kept until you delete your account or request deletion.
+                            We retain your personal information only for as long as necessary to fulfil the purposes outlined in this policy, unless a longer retention period is required or permitted by law. Account-related data is kept until you delete your account or request deletion.
                         </p>
                     </Box>
 
@@ -162,7 +162,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Data Security</h2>
                         <p>
-                            We use appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, including your name, linked IDs, authentication tokens, and any associated data stored on our servers. This includes, but isn't limited to, firewalls and secure access protocols. While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.
+                            We use appropriate data collection, storage, and processing practices and security measures to protect against unauthorised access, alteration, disclosure, or destruction of your personal information, including your name, linked IDs, authentication tokens, and any associated data stored on our servers. This includes, but is not limited to, firewalls and secure access protocols. While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.
                         </p>
                     </Box>
 
@@ -180,7 +180,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Children's Privacy</h2>
                         <p>
-                            Our services are not intended for anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you're a parent or guardian and know that your child has provided us with personal information, please contact us. If we find out that we have collected personal information from a child under 13 without verified parental consent, we will take steps to remove that information from our servers.
+                            Our services are not intended for anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and know that your child has provided us with personal information, please contact us. If we find out that we have collected personal information from a child under 13 without verified parental consent, we will take steps to remove that information from our servers.
                         </p>
                     </Box>
 
@@ -189,7 +189,7 @@ export default function privacyPage() {
                     <Box>
                         <h2>Changes to This Privacy Policy</h2>
                         <p>
-                            We may update our Privacy Policy from time to time. We'll let you know about any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. For significant changes, we might also notify you through TurkuNode or the tkurbx.com website. We advise you to review this Privacy Policy periodically for any changes. Your continued use of TurkuNode and our services after any modifications will mean you acknowledge and agree to the updated policy.
+                            We may update our Privacy Policy from time to time. We will let you know about any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. For significant changes, we might also notify you through TurkuNode or the tkurbx.com website. We advise you to review this Privacy Policy periodically for any changes. Your continued use of TurkuNode and our services after any modifications will mean you acknowledge and agree to the updated policy.
                         </p>
                     </Box>
 
