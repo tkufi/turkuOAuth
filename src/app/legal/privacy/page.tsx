@@ -104,6 +104,48 @@ export default function privacyPage() {
                                 <b>Comply with Laws:</b> To meet applicable laws, regulations, and legal processes.
                             </li>
                         </Stack>
+                        <p><b>Legal Basis for Processing (GDPR):</b> We rely on your consent when linking accounts, on contractual necessity for providing our services, on our legitimate interests for security and service improvements, and on legal obligations where required by law.</p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Your Rights</h2>
+                        <p>
+                            You have certain rights regarding your personal information, including:
+                        </p>
+                        <Stack component="ul" spacing={1.5} sx={{ pl: 3 }}>
+                            <li>
+                                <b>Right to Access:</b> You can request a copy of the personal data we hold about you.
+                            </li>
+                            <li>
+                                <b>Right to Correct or Update:</b> You can ask us to correct or update inaccurate or incomplete information.
+                            </li>
+                            <li>
+                                <b>Right to Delete:</b> You may request deletion of your personal data, subject to legal or contractual obligations.
+                            </li>
+                            <li>
+                                <b>Right to Object:</b> You can object to certain types of processing, such as direct marketing or processing based on legitimate interests.
+                            </li>
+                            <li>
+                                <b>Right to Withdraw Consent:</b> If processing is based on your consent, you may withdraw it at any time without affecting the lawfulness of processing before withdrawal.
+                            </li>
+                        </Stack>
+                        <p>
+                            To exercise any of these rights, please contact us at{" "}
+                            <a href="mailto:privacy@tkurbx.com" style={{ color: "#64B5F6", textDecoration: "underline" }}>
+                                privacy@tkurbx.com
+                            </a>.
+                        </p>
+                    </Box>
+
+                    <Divider variant="middle" color="#E0E0E0" />
+
+                    <Box>
+                        <h2>Data Retention</h2>
+                        <p>
+                            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law. Account-related data is kept until you delete your account or request deletion.
+                        </p>
                     </Box>
 
                     <Divider variant="middle" color="#E0E0E0" />
@@ -127,9 +169,9 @@ export default function privacyPage() {
                     <Divider variant="middle" color="#E0E0E0" />
 
                     <Box>
-                        <h2>Cookies</h2>
+                        <h2>Cookies and Similar Technologies</h2>
                         <p>
-                            TurkuNode doesn't directly use cookies for its main functions. On the tkurbx.com website, cookies are used solely for authentication purposes, allowing you to log in and stay logged in securely.
+                            TurkuNode does not directly use cookies for its main functions. On the tkurbx.com website, cookies (or similar local storage technologies) are used solely for authentication purposes—these are essential to allow you to log in and stay logged in securely. We do <b>not</b> use cookies for tracking, advertising, or analytics, and we do <b>not</b> set any third-party cookies or use third-party analytics tools. All authentication cookies are strictly necessary and are not shared with external parties.
                         </p>
                     </Box>
 
