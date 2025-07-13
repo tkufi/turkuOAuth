@@ -241,7 +241,7 @@ export default function TermsPage() {
                                 Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the Service; and/or
                             </li>
                             <li>
-                                The defamatory, offensive, or illegal conduct of any User or third party. In no event will the Owner, and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners, suppliers, and employees be liable for any claims, proceedings, liabilities, obligations, damages, losses, or costs in an amount exceeding the amount paid by User to the Owner hereunder in the preceding 12 months, or the period of duration of this agreement between the Owner and User, whichever is shorter.
+                                The defamatory, offensive, or illegal conduct of any User or third party. In no event will the Owner, and its subsidiaries, affiliates, officers, directors, agents, co-branders, partners, suppliers, and employees be liable for any claims, proceedings, liabilities, obligations, damages, losses, or costs in an amount exceeding a total of €0 (zero euros).
                             </li>
                         </Stack>
 
@@ -294,7 +294,7 @@ export default function TermsPage() {
                             Within the limits of law, the Owner may also decide to suspend or terminate the Service altogether. If the Service is terminated, the Owner will cooperate with Users to enable them to withdraw Personal Data or information in accordance with applicable law.
                         </p>
                         <p>
-                            Additionally, the Service might not be available due to reasons outside the Owner’s reasonable control, such as “force majeure” (e.g., labour actions, infrastructural breakdowns, or blackouts).
+                            The Owner shall not be liable for any failure to perform or delay in performance of any obligation under these Terms if such failure or delay is caused by events beyond the Owner’s reasonable control (“Force Majeure Events”). Force Majeure Events include, but are not limited to, natural disasters, war, terrorism, riots, civil commotion, governmental actions, strikes, lockouts, labor disputes, epidemics, pandemics, fire, flood, earthquake, explosion, infrastructure breakdowns, blackouts, or interruptions in telecommunications or internet services. In such cases, the Owner’s obligations will be suspended for the duration of the Force Majeure Event, and the Owner will not be liable for any damages or losses resulting from such events.
                         </p>
 
                         <h3>Service Reselling</h3>
@@ -304,7 +304,7 @@ export default function TermsPage() {
 
                         <h3>Privacy Policy</h3>
                         <p>
-                            To learn more about the use of your Personal Data, please refer to the Privacy Policy of these Services.
+                            To learn more about the use of your Personal Data, please refer to the <a href="/legal/privacy" style={{ color: "#64B5F6", textDecoration: "underline" }}>Privacy Policy</a> of these Services.
                         </p>
 
                         <h3>Intellectual Property Rights</h3>
@@ -317,7 +317,7 @@ export default function TermsPage() {
 
                         <h3>Changes to these Terms</h3>
                         <p>
-                            The Owner reserves the right to amend or otherwise modify these Terms at any time. In such cases, the Owner will appropriately inform you of these changes.
+                            The Owner reserves the right to amend or otherwise modify these Terms at any time. In such cases, the Owner will inform you of these changes by publishing the updated Terms on this webpage and by announcing the changes publicly in the community's Discord server. Additional notifications (such as email or in-app messages) may also be used where appropriate.
                         </p>
                         <p>
                             Such changes will only affect the relationship with you for the future.
