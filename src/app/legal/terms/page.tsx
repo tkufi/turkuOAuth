@@ -323,7 +323,7 @@ export default function TermsPage() {
                             Such changes will only affect the relationship with you for the future.
                         </p>
                         <p>
-                            Your continued use of the Service will mean you accept the revised Terms. If you do not wish to be bound by the changes, you must stop using the Service. Failure to accept the revised Terms may entitle either party to terminate the Agreement.
+                            Your continued use of the Service after a change will mean you accept the revised Terms. For significant changes, we will provide reasonable advance notice—such as via Discord announcement—before the changes take effect. If you do not wish to be bound by the changes, you must stop using the Service before the new Terms become effective. Failure to accept the revised Terms may entitle either party to terminate the Agreement.
                         </p>
                         <p>
                             The applicable previous version will govern the relationship prior to your acceptance. You can obtain any previous version from the Owner.
