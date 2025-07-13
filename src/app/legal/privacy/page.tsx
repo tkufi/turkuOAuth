@@ -19,7 +19,7 @@ export default function privacyPage() {
 
                 <Stack spacing={3} sx={{ my: 3 }} textAlign="left">
                     <Box component="p" sx={{ fontWeight: 500, color: "text.secondary" }}>
-                        Effective Date: <b>12 June 2025</b>
+                        Effective Date: <b>13 June 2025</b>
                     </Box>
 
                     <Divider variant="middle" color="#E0E0E0" />
