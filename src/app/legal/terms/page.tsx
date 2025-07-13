@@ -22,7 +22,7 @@ export default function TermsPage() {
                         Effective Date: <b>13 June 2025</b>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Introduction</h2>
@@ -46,7 +46,7 @@ export default function TermsPage() {
 
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Key Information at a Glance</h2>
@@ -55,7 +55,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Terms of Use</h2>
@@ -70,7 +70,7 @@ export default function TermsPage() {
                         </Stack>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Account Registration</h2>
@@ -84,7 +84,7 @@ export default function TermsPage() {
 
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Account Termination</h2>
@@ -93,7 +93,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Account Suspension and Deletion</h2>
@@ -105,7 +105,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Content on Tkurbx and TurkuNode Services</h2>
@@ -119,7 +119,7 @@ export default function TermsPage() {
 
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Rights Regarding Content – All Rights Reserved</h2>
@@ -137,7 +137,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Access to External Resources</h2>
@@ -149,7 +149,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
                     <Box>
                         <h2>Acceptable Use</h2>
 
@@ -180,7 +180,7 @@ export default function TermsPage() {
                         </Stack>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>API Usage Terms</h2>
@@ -192,7 +192,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Liability and Indemnification</h2>
@@ -277,7 +277,7 @@ export default function TermsPage() {
 
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Common Provisions</h2>
@@ -359,7 +359,7 @@ export default function TermsPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                 </Stack>
 

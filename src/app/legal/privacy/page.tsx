@@ -22,7 +22,7 @@ export default function privacyPage() {
                         Effective Date: <b>13 June 2025</b>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Introduction</h2>
@@ -31,7 +31,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Information Collection</h2>
@@ -79,7 +79,7 @@ export default function privacyPage() {
                         </Stack>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Use of Information</h2>
@@ -107,7 +107,7 @@ export default function privacyPage() {
                         <p><b>Legal Basis for Processing (GDPR):</b> We rely on your consent when linking accounts, on contractual necessity for providing our services, on our legitimate interests for security and service improvements, and on legal obligations where required by law.</p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Your Rights</h2>
@@ -139,7 +139,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Data Retention</h2>
@@ -148,7 +148,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Sharing of Information</h2>
@@ -157,7 +157,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Data Security</h2>
@@ -166,7 +166,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Cookies and Similar Technologies</h2>
@@ -175,7 +175,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Children's Privacy</h2>
@@ -184,7 +184,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Changes to This Privacy Policy</h2>
@@ -193,7 +193,7 @@ export default function privacyPage() {
                         </p>
                     </Box>
 
-                    <Divider variant="middle" color="#E0E0E0" />
+                    <Divider color="#E0E0E0" />
 
                     <Box>
                         <h2>Contact Us</h2>
