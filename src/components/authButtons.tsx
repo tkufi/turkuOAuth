@@ -82,7 +82,7 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
                     size="large"
                     startIcon={<Icon icon="simple-icons:robloxstudio" width="24" height="24"></Icon>}
                 >
-                    Sign In with Roblox
+                    Login with Roblox
                 </Button>
             )
             }
