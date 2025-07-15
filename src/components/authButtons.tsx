@@ -1,6 +1,6 @@
 import { signIn, User, linkSocial, authClient } from "@/lib/client";
 import { Box, Button } from "@mui/material";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 
@@ -25,10 +25,10 @@ type Props = {
 };
 
 export default function AuthButtons({ sessionData, ...props }: Props) {
-    const router = useRouter();
+    // const router = useRouter();
     const [account, setAccount] = useState({
         robloxId: "",
-        discordId: "",
+        // discordId: "",
         username: "",
         imageUrl: "",
     });
@@ -38,13 +38,13 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
     useEffect(() => {
         const fetchAccountDetails = async () => {
             try {
-                const accountData = await authClient.listAccounts();
-                const robloxInfo = accountData.data?.find(usrAccount => usrAccount.provider === "roblox");
-                const discordInfo = accountData.data?.find(usrAccount => usrAccount.provider === "discord");
+                // const accountData = await authClient.listAccounts();
+                // const robloxInfo = accountData.data?.find(usrAccount => usrAccount.provider === "roblox");
+                // const discordInfo = accountData.data?.find(usrAccount => usrAccount.provider === "discord");
 
                 setAccount({
-                    robloxId: robloxInfo?.accountId || "",
-                    discordId: discordInfo?.accountId || "",
+                    robloxId: session?.user.robloxId || "",
+                    // discordId: discordInfo?.accountId || "",
                     username: session?.user.name || "",
                     imageUrl: session?.user.image?.toString() || "",
                 });
@@ -75,7 +75,8 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
         <Box
             {...props}
         >
-            {((!session) && (!account.discordId)) && (
+            {/* {((!session) && (!account.discordId)) && ( */}
+            {(!session) && (
                 <Button
                     variant="outlined"
                     onClick={signIn}
