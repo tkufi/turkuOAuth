@@ -5,6 +5,11 @@ import { PrismaClient } from '../../generated/prisma';
 const prisma = new PrismaClient();
 
 export const auth = betterAuth({
+  trustedOrigins: [
+    "https://auth.tkurbx.com",
+    "http://localhost:3000",
+  ],
+
   database: prismaAdapter(prisma, {
     provider: "mysql",
   }),

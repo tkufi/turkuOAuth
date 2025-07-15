@@ -49,11 +49,11 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
                     imageUrl: session?.user.image?.toString() || "",
                 });
 
-                if (robloxInfo && discordInfo) {
-                    setTimeout(() => {
-                        router.push("https://tkurbx.com"); // Redirect to home page after 5 seconds
-                    }, 5_000);
-                }
+                // if (robloxInfo && discordInfo) {
+                //     setTimeout(() => {
+                //         router.push("https://tkurbx.com"); // Redirect to home page after 5 seconds
+                //     }, 5_000);
+                // }
             }
             catch (err) {
                 console.error("Error fetching account details:", err);
@@ -90,7 +90,7 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
             {isPending && <p>Loading...</p>}
             {error && <p>Error: {error.message}</p>}
 
-            {session && !account.discordId && (
+            {/* {session && !account.discordId && (
                 <Button
                     variant="outlined"
                     onClick={handleLinkDiscord}
@@ -100,12 +100,19 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
                     Link Discord
                 </Button>
 
-            )}
+            )} */}
 
-            {session && account.discordId && account.robloxId && (
+            {/* {session && account.discordId && account.robloxId && (
                 <Box>
                     <p> You have successfully authenticated. </p>
                     <p> You will be redirected to the dashboard in 5 seconds... </p>
+                </Box>
+            )} */}
+
+            {session && account.robloxId && (
+                <Box>
+                    <p> You have successfully logged in. </p>
+                    <p> Thank you for your time. </p>
                 </Box>
             )}
 
