@@ -65,7 +65,7 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
         }
 
     }, [session]);
-    // Align all items to the vertical and horizontal center of the screen
+    
     const handleLinkDiscord = useCallback(() => {
         linkSocial("discord");
     }, []);
