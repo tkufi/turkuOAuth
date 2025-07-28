@@ -27,7 +27,7 @@ export function linkSocial(socialProvider: string) {
     return authClient.linkSocial({
         provider: socialProvider,
         callbackURL: "/",
-        scopes: ["identify"],
+        // scopes: ["identify"],
     });
 }
 
