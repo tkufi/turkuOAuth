@@ -31,7 +31,7 @@ export default function authPage() {
                   src="./tkurbx.svg"
                   alt="logo"
                   height={64}
-                  display={"inline"}
+                  sx={{ display: "inline" }}
                 >
                 </Box>
 

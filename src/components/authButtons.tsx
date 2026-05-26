@@ -39,8 +39,8 @@ export default function AuthButtons({ sessionData, ...props }: Props) {
         const fetchAccountDetails = async () => {
             try {
                 const accountData = await authClient.listAccounts();
-                const robloxInfo = accountData.data?.find(usrAccount => usrAccount.provider === "roblox");
-                const discordInfo = accountData.data?.find(usrAccount => usrAccount.provider === "discord");
+                const robloxInfo = accountData.data?.find(usrAccount => usrAccount.providerId === "roblox");
+                const discordInfo = accountData.data?.find(usrAccount => usrAccount.providerId === "discord");
 
                 setAccount({
                     robloxId: session?.user.robloxId || "",

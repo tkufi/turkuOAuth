@@ -6,9 +6,9 @@ export default function privacyPage() {
     return (
         <>
             <Box
-                minHeight={"100vh"}
-                width={{ xs: "100%", sm: "50%" }}
                 sx={{
+                    minHeight: "100vh",
+                    width: { xs: "100%", sm: "50%" },
                     p: 3,
                     backgroundColor: "#161c24",
                     color: "#ffffff",
@@ -17,7 +17,7 @@ export default function privacyPage() {
             >
                 <h1>Privacy Policy for TurkuNode Discord Bot and tkurbx.com</h1>
 
-                <Stack spacing={3} sx={{ my: 3 }} textAlign="left">
+                <Stack spacing={3} sx={{ my: 3, textAlign: "left" }}>
                     <Box component="p" sx={{ fontWeight: 500, color: "text.secondary" }}>
                         Effective Date: <b>13 June 2025</b>
                     </Box>
